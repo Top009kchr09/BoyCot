@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Marck+Script&family=Philosopher:ital@1&display=swap');
+
+#header{
+  background: linear-gradient(180deg, #8a603a, #ca9e76);
+  border: 4px double black;
+  margin: 0px 450px 0px 450px;
+  height: 200px;
+ }
+
+ #menu1{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  margin-top: 150px;
+}
+
+#menu1 ul{
+  position: relative;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  list-style: none;
+}
+
+#menu1 > ul::after{
+  display: block;
+  width: 100%;
+  height: 0px;
+  clear: both;
+  content: " ";
+}
+
+#menu1 ul li{
+  position: relative;
+  display: block;
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+#menu1 ul li a{
+  display: block;
+  padding: 9px 25px 0px 25px;
+  font-size: 18px;
+  line-height: 1.3em;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 36px;
+  box-sizing: border-box;
+  color: #3a4836;
+}
+
+#menu1 ul li ul{
+    position: absolute;
+    top: 36px;
+    left: 0px;
+    display: none;
+    width: 200px;
+    background-color: #ca9e76;
+}
+
+#menu1 ul li:hover ul{
+  display: block;
+}
+
+#menu1 ul li ul li{
+  float: none;
+  width: 100%;
+}
+
+#menu1 ul li ul li a{
+  display: block;
+  text-transform: none;
+  height: auto;
+  padding: 7px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #ffffff;
+  color: #3a4836;
+}
+
+#menu1 ul li ul li:first-child a{
+  border-top: 0px;
+}
+
+body {
+  backdrop-filter: blur(2px);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px;
+}
+
+h1, h2, h3, h5 {
+  font-family: 'Cormorant SC', serif;
+  font-size: 20px;
+  color: #3a4836;
+  padding: 25px;
+}
+
+h4 {
+  font-family: 'Marck Script', cursive;
+  font-weight: 400;
+  font-size: 50px;
+  color: #3a4836;
+}
+
+p {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+  margin: 30px;
+  line-height: 25px;
+}
+
+a {
+  font-family: 'Cormorant SC', serif;
+  font-size:18px;
+  letter-spacing: 2px;
+  color: #3a4836;
+}
+
+#panel {
+  top: 256px; 
+  left: 0px; 
+  background: linear-gradient(180deg, #8a603a, #ca9e76);
+  width: 30px;
+  height: 20px; 
+  font-family: 'Philosopher', sans-serif;
+  color: #3a4836;
+  text-align: center; 
+  padding: 10px;
+  border: 4px double black;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  position: sticky;
+ }
+
+ 
+/* СКРЫТЫЙ БЛОК */
+.left-panel{
+  position: fixed; 
+  top: 256px;
+  left: -240px; 
+  height: auto;
+  text-align: left;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+#panel:hover {
+  left: 240px; 
+}
+#panel:hover .left-panel {
+  left: 0; /* отступ слева */
+}
+
+#list {
+  border-image-source: url(http://forumstatic.ru/files/001b/bf/bc/39055.png);
+  border-image-slice: 55 200 55 fill;
+  border-image-repeat: repeat round;
+  border-image-width: auto;
+  width: 84%;
+  padding: 5px 20px;
+}
+
+#menu {
+  border: 4px double black;
+  background:linear-gradient(180deg,#8a603a, #ca9e76);
+  font: bold 2.4rem/1 'Cormorant SC', serif;
+}
+
+ol {
+  list-style: none;
+}
+#menu ol { 
+  counter-reset: menu;
+  padding: 0px;
+}
+
+.menu-item a {
+  display:flex;
+  justify-content:flex-start; 
+  color:currentColor;
+  text-decoration:none;
+  padding: 5px 0px;
+}
+.menu-item a::before {
+  content:"";
+  border-bottom:1px dotted black;
+  position:relative; top:-3px;
+  flex:1 1 auto;
+  margin:1px;
+  order:1;
+}
+
+.menu-item a::after {
+  counter-increment:menu;
+  content:counters(menu, ".");
+  flex:0 0 auto;
+  order:2;
+  text-decoration:underline;
+}
+.sub-menu {
+  font-size:16px;
+  font-weight:normal;
+}
+
+.sub-menu > li > a {
+  text-indent:0ch; 
+  padding:0.5rem 0 0.5rem 1ch;
+  margin:0;
+}
+
+#menu::before { transition:transform 0.5s; }
+#menu::after { transition:transform 0.5s; }
+#menu .menu-item a::after { transition:transform 0.3s }
+#menu:hover .menu-item a::after { transform:rotate(0) }
+#menu:hover > ol > .menu-item { opacity:0.3; }
+
+.menu-item:hover {
+  transition:background-color 0.3s;
+  background:rgba(0,0,0,0.15);
+  opacity:1 !important;
+}
+.menu-item:hover a::after {
+  text-decoration:none;
+}
+.menu-item:hover > a::before {
+  transition:flex-grow 0.3s;
+  width:0; flex-grow:0;
+  transform-origin:center bottom;
+}
+
+.sub-menu > .menu-item {
+  max-height:1ch;
+  transform:scaleY(0.1);
+  transform-origin:center top;
+  transition:transform 0.2s, max-height 0.5s;
+}
+#menu:hover .sub-menu .menu-item {
+  max-height:10em;
+  transform:scaleY(1);
+}
+.gallery img{
+  margin:30px;
+  border:3px solid #fff;
+}
+a.photo:hover img{
+  border:3px solid #3a4836; 
+}
+
+.post {
+  border: 4px double black;
+  margin: 0px 450px 0px 450px;
+  box-shadow: 0 140px 280px rgba(0,0,0,0.25), 0 100px 100px rgba(0,0,0,0.22);
+  background: linear-gradient(90deg, #fff, #e6c69d);
+}
+
+.text {
+  position: relative;
+  max-width: 790px; 
+  margin: 0 auto; 
+}
+
+.text .content {
+  position: absolute;
+  bottom: 0; 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1;
+  width: 100%; 
+  padding: 20px; 
+}
+
+footer {
+  background: linear-gradient(180deg, #ca9e76, #8a603a);
+  border: 4px double black;
+  margin: 30px 450px 0px 450px;
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.footer-column {
+  flex: 50%;
+  margin: 20px;
+}

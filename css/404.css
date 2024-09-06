@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Marck+Script&family=Philosopher:ital@1&display=swap');
+
+#header{
+ 	background: linear-gradient(180deg, #8a603a, #ca9e76);
+ 	border: 4px double black;
+  margin: 0px 450px 0px 450px;
+ 	height: 200px;
+ }
+
+ #menu1{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  margin-top: 150px; 
+}
+
+#menu1 ul{
+  position: relative;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  list-style: none;
+}
+
+#menu1 ul li{
+  position: relative;
+  display: block;
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+#menu1 ul li a{
+  display: block;
+  padding: 9px 25px 0px 25px;
+  font-size: 18px;
+  line-height: 1.3em;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 36px;
+  box-sizing: border-box;
+  color: #3a4836;
+}
+
+#menu1 ul li ul{
+  position: absolute;
+  top: 36px;
+  left: 0px;
+  display: none;
+  width: 200px;
+  background-color: #ca9e76;
+}
+
+#menu1 ul li ul li{
+  float: none;
+  width: 100%;
+}
+
+#menu1 ul li ul li a{
+  display: block;
+  text-transform: none;
+  height: auto;
+  padding: 7px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #ffffff;
+  color: #3a4836;
+}
+
+#menu1 ul li ul li:first-child a{
+  border-top: 0px;
+}
+
+body {
+  backdrop-filter: blur(2px);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px;
+}
+
+h1, h2, h3, h5 {
+  font-family: 'Cormorant SC', serif;
+  font-size: 20px;
+  color: #3a4836;
+  padding:25px;
+}
+
+h4 {
+  font-family: 'Marck Script', cursive;
+  font-weight: 400;
+  font-size: 50px;
+  color: #3a4836;
+}
+
+p {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+  margin: 30px;
+  line-height: 25px;
+}
+
+ul {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+  margin: 30px;
+  line-height: 25px;
+}
+
+a {
+  font-family: 'Cormorant SC', serif;
+  font-size:18px;
+  letter-spacing: 2px;
+  color: #3a4836;
+}
+
+.post {
+  border: 4px double black;
+  margin: 30px 450px 0px 450px;
+  box-shadow: 0 140px 280px rgba(0,0,0,0.25), 0 100px 100px rgba(0,0,0,0.22);
+  background: linear-gradient(90deg, #fff, #e6c69d);
+}
+
+footer {
+  background: linear-gradient(180deg, #ca9e76, #8a603a);
+  border: 4px double black;
+  margin: 30px 450px 0px 450px;
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.footer-column {
+  flex: 50%;
+  margin: 20px;
+}
+
+ol {
+  list-style: none;
+}
